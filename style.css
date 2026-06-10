@@ -1,1 +1,161 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
+/* Corpo */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f0f8ff;
+    color: #034732;
+    padding: 10px;
+    font-size: 16px;
+}
+
+/* Botão de acessibilidade fixo */
+.acessibilidade {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    z-index: 1000;
+}
+
+.acessibilidade button {
+    padding: 5px 10px;
+    cursor: pointer;
+    background-color: #034732;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+}
+
+/* Cabeçalho */
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    font-size: 2em;
+    color: #027373;
+}
+
+header p {
+    font-size: 1.2em;
+}
+
+/* Seções */
+section {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    margin: 20px 0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+h2 {
+    color: #034732;
+    margin-bottom: 10px;
+}
+
+/* Listas */
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+li {
+    margin-bottom: 10px;
+    font-size: 1rem;
+}
+
+/* Formulário da calculadora */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+input[type="number"], select {
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #027373;
+}
+
+button[type="submit"] {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #027373;
+    color: white;
+    cursor: pointer;
+}
+
+/* Resultado */
+#resultado {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #dff6ff;
+    border-left: 5px solid #027373;
+    border-radius: 8px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.9em;
+}
+
+/* Alto contraste */
+.contraste {
+    background-color: black;
+    color: white;
+}
+
+.contraste section {
+    background-color: #222;
+    color: white;
+}
+
+.contraste h1,
+.contraste h2,
+.contraste p,
+.contraste li {
+    color: white;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    section {
+        padding: 15px;
+    }
+
+    .acessibilidade {
+        right: 5px;
+        top: 5px;
+    }
+
+    .acessibilidade button {
+        font-size: 12px;
+        padding: 8px;
+    }
+
+    form {
+        width: 100%;
+    }
+
+    input, select, button {
+        width: 100%;
+    }
+}
